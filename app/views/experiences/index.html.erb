@@ -1,0 +1,13 @@
+<h1><%= @experiences.count %> Experiences</h1>
+
+<ul>
+  <% @experiences.each do |experience| %>
+  <li>
+    <p><%= experience.name %></p>
+    <p><%= experience.price %>€</p>
+    <p><%= experience.date %></p>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to 'accueil', root_path %>
