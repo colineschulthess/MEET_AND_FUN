@@ -1,5 +1,6 @@
 class Experience < ApplicationRecord
   belongs_to :host, class_name: 'User'
+  has_one_attached :photo
   validates :name, presence: true
   validates :address, presence: true
   validates :date, presence: true

@@ -6,6 +6,7 @@
     <p><%= experience.name %></p>
     <p><%= experience.price %>€</p>
     <p><%= experience.date %></p>
+    <%= link_to 'see more', experience_path(experience) %>
   </li>
   <% end %>
 </ul>
