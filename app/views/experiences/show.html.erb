@@ -1,2 +1,21 @@
-<h1>Experiences#show</h1>
-<p>Find me in app/views/experiences/show.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_tag @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
+    <h1 class="display-3 text-center"><%= @experience.name %></h1>
+
+</div>
+
+<div class="container md-1">
+  <div class="row mt-4">
+
+    <div class="col-8">
+      <h2>Au Programme</h2>
+      <p class="p-3"><%= @experience.description %></p>
+      <p class="p-3"><%= @experience.capacity %></p>
+  <button type="button" class="btn btn-primary btn-lg btn-block"> Reservé </button>
+    </div>
+
+    <div class="col-4">
+    <p>a voir</p>
+    </div>
+
+  </div>
+</div>
