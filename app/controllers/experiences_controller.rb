@@ -3,6 +3,8 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
+    @experiences_last = Experience.all.last(3)
+    @experiences_
   end
 
   def new
@@ -20,6 +22,7 @@ class ExperiencesController < ApplicationController
 
 
   def show
+    @experiences = Experience.all
   end
 
   def edit
