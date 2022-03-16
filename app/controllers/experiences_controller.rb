@@ -20,6 +20,7 @@ class ExperiencesController < ApplicationController
 
 
   def show
+    @experiences = Experience.all
   end
 
   def edit
