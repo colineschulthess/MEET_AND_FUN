@@ -9,6 +9,7 @@ puts "Cleaning database..."
 p "creating users"
 Experience.destroy_all
 User.destroy_all
+
 user1 = User.create!(email: 'user@example.com', password: 'user@example.com', sexe: 'homme', age: 20, name: 'dylan')
   p "#{user1.name}"
 user2 = User.create!(email: 'test@example.com', password: 'test@example.com', sexe: 'femme', age: 20, name: 'coline')
@@ -30,10 +31,9 @@ user9 = User.create!(email: 'usera@example.com', password: 'usera@example.com', 
 user10 = User.create!(email: 'userb@example.com', password: 'userb@example.com', sexe: 'femme', age: 37, name: 'amy')
   p "#{user10.name}"
 
-
   puts "Creating experiences..."
+
 experience1 = { name: "Sortie Catamaran Dauphins", description: "excursion en catamaran au Trois-Ilets", address: "Trois-Ilets", date: '12/06/2022', capacity: 10, price: 25, host: user1}
-experience1.photo.attach(io: photo1)
 experience2 = { name: "soirée carnaval", description: "soirée thème plume ", address: "Case Pilote", date: '12/03/2022', capacity: 100, price: 30, host: user2 }
 experience3 = { name: "Les ateliers de SISSY", description: "Vision Board ", address: "Ducos", date: '21/03/2022', capacity: 8, price: 25, host: user3 }
 experience4 = { name: "Chill out", description: "After beach", address: "Le Robert", date: '27/03/2022', capacity: 12, price: 10, host: user4 }
@@ -44,4 +44,4 @@ experience8 = { name: "Buggy", description: "Randonnée d'1h20 ", address: "Le D
 experience9 = { name: "After Work", description: "On friday we all talk in english  ", address: "LAKOU Fort-de-France", date: '18/03/2022', capacity: 50, price: 5, host: user9 }
 experience = { name: "Fan de ciné", description: "On regarde et on en discute  ", address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 }
 
-puts "Finished!"
+  p "#{experience10.name}"

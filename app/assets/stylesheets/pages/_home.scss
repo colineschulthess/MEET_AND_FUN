@@ -22,12 +22,41 @@
 }
 
 .btn-red {
-  color: #fff;
+  color: white;
   background-color: rgba(228, 23, 73, 1);
   border-color: rgba(228, 23, 73, 1);
   border-radius: 4px;
+  text-decoration: none;
+  font-family: 'ubuntu',sans-serif;
 }
 
-.sous-titre {
+.btn-red {
+  a {
+    color: white !important
+  }
+}
+.btn-yellow {
+  color: #fff;
+  background-color: #F5587B;
+  border-color: #ff8A5C;;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'ubuntu',sans-serif;
+
+  padding:8px;
+}
+
+.btn-yellow a {
+  color: white
+}
+
+h3 {
   margin-top: 20px;
+  color: rgba(228, 23, 73, 1);
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: regular;
 }

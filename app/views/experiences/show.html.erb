@@ -1,21 +1,42 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
+
     <h1 class="display-3 text-center"><%= @experience.name %></h1>
 
 </div>
 
-<div class="container md-1">
+<div class="container md-1 mb-4">
   <div class="row mt-4">
 
     <div class="col-8">
       <h2>Au Programme</h2>
-      <p class="p-3"><%= @experience.description %></p>
-      <p class="p-3"><%= @experience.capacity %></p>
-  <button type="button" class="btn btn-primary btn-lg btn-block"> Reservé </button>
+      <p class="p-3"><%= @experience.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam suscipit rerum deleniti explicabo ad incidunt iste nobis. Dolor sapiente, vel cumque quisquam reprehenderit totam? Exercitationem sequi delectus eius assumenda.</p>
+      <p class="p-3">Nombres de Participants possible - <%= @experience.capacity %>  Places disponibles : <%= @experience.capacity -= 7%></p>
+
     </div>
 
     <div class="col-4">
-    <p>a voir</p>
+      <p class="p-3"><%= @experience.date %></p>
+      <button type="button" class="btn-red btn-lg active" role="button" aria-pressed="true"> Réserver </button>
     </div>
 
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @experiences.each do |experience| %>
+      <%= link_to experience_path(experience) do %>
+        <div class="card-experience">
+          <img src="" alt="">
+          <div class="card-experience-infos">
+            <div>
+              <h2><%= experience.name %></h2>
+            </div>
+            <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

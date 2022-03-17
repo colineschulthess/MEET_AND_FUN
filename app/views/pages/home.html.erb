@@ -1,40 +1,27 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('banner.jpg') %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('fete_à_la_plage.jpg') %>);">
   <div class= "container">
     <div class= "row">
       <div class= "col-12 col-md-8 col-lg-6">
         <h1> MEET AND FUN </h1>
         <p>Enjoy and split the bill ! </p>
-        <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-red">
-          <i class="fas fa-search"></i> Search
-          </button>
-       </div>
-        </form>
+        <%= form_tag experiences_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find an experience" %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <p class="sous-titre"> <em>Les dernières expériences</em></p>
-</div>
-
-<div class="container">
-
-  <div class="cards">
-    <% @experiences.each do |experience| %>
-      <div class="card-experience">
-        <img src="<%= asset_url('sortie_mer.jpg') %>" alt="">
-        <div class="card-experience-infos">
-          <div>
-            <h2><%= experience.name %></h2>
-          </div>
-          <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
-        </div>
-      </div>
-    <% end %>
+  <div class= "row mt-3">
+    <h3>Les dernières expériences publiées</h3>
+      <%= render "/experiences/cards_last"%>
+        <button class="btn-red mt-3">
+            <%= link_to "Voir toutes les expériences", experiences_path %>
+        </button>
   </div>
-
 </div>

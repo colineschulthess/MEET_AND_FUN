@@ -1,0 +1,16 @@
+<div class="cards">
+    <% @experiences_last.each do |experience| %>
+      <%= link_to experience_path(experience) do %>
+      <div class="card-experience">
+         <img src="<%= asset_url('sortie_mer.jpg') %>" alt="">
+        <div class="card-experience-infos">
+          <div>
+            <h2><%= experience.name %></h2>
+          </div>
+          <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
+        </div>
+      </div>
+      <% end %>
+  <% end %>
+  </div>
+</div>

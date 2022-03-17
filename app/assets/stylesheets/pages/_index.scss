@@ -1,2 +1,31 @@
 // Import page-specific CSS files here.
-@import "home";
+// Specific CSS for your home-page
+@import 'home';
+
+.header-banner {
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+  padding-top: 70px;
+}
+
+.header-banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: regular;
+  padding-bottom: 100px;
+}
+
+.header-banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h3 {
+  color: #FF8A5C;
+  font-size: 20px;
+}
