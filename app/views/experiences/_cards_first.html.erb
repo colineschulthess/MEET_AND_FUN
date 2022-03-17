@@ -2,7 +2,7 @@
     <% @experiences_first.each do |experience| %>
       <%= link_to experience_path(experience) do %>
       <div class="card-experience">
-         <img src="<%= asset_url('sortie_mer.jpg') %>" alt="">
+         <%= cl_image_tag experience.photo.key, alt: '' %>
         <div class="card-experience-infos">
           <div>
             <h2><%= experience.name %></h2>
