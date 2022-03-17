@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :experiences, foreign_key: 'host_id'
 
+  GENRES = ["homme", "femme", "non genre"]
+
   validates :name, presence: true
-  validates :sexe, presence: true, inclusion: { in: ["homme", "femme", "non genre"] }
+  validates :sexe, presence: true, inclusion: { in: GENRES }
   validates :age, presence: true, numericality: { only_integer: true }
 end
