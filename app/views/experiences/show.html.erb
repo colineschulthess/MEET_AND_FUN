@@ -11,14 +11,13 @@
     <div class="col-8">
       <h2>Au Programme</h2>
       <p class="p-3"><%= @experience.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam suscipit rerum deleniti explicabo ad incidunt iste nobis. Dolor sapiente, vel cumque quisquam reprehenderit totam? Exercitationem sequi delectus eius assumenda.</p>
-      <p class="p-3">Nombres de Participants possible - <%= @experience.capacity %>  Places disponibles : <%= @experience.capacity -= 7%></p>
+      <p class="p-3">Nombres de Participants possible - <%= @capacity %>  <br> Places disponibles : <%#= @actual_capacity %> </p>
 
     </div>
 
     <div class="col-4">
       <p class="p-3"><%= @experience.date %></p>
       <button type="button" class="btn-red btn-lg active" role="button" aria-pressed="true"> Réserver </button>
-    </div>
 
   </div>
 </div>
