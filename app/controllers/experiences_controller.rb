@@ -4,7 +4,12 @@ class ExperiencesController < ApplicationController
   def index
     @experiences = Experience.all
     @experiences_last = Experience.all.last(3)
-    @experiences_
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR address ILIKE :query OR description ILIKE :query"
+      @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @experiences = Experience.all
+    end
   end
 
   def new
