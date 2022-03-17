@@ -42,6 +42,6 @@ experience6 = { name: "Fly Board", description: "Volez sur l'eau", address: "Sai
 experience7 = { name: "Jet ski", description: "Excursion côte nord ", address: "Le Vauclin", date: '20/03/2022', capacity: 6, price: 270, host: user7 }
 experience8 = { name: "Buggy", description: "Randonnée d'1h20 ", address: "Le Diamant", date: '21/03/2022', capacity: 8, price: 100, host: user8 }
 experience9 = { name: "After Work", description: "On friday we all talk in english  ", address: "LAKOU Fort-de-France", date: '18/03/2022', capacity: 50, price: 5, host: user9 }
-experience = { name: "Fan de ciné", description: "On regarde et on en discute  ", address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 }
+experience10 = { name: "Fan de ciné", description: "On regarde et on en discute  ", address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 }
 
   p "#{experience10.name}"

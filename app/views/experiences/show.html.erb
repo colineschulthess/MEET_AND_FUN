@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%#= cl_image_path @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
 
     <h1 class="display-3 text-center"><%= @experience.name %></h1>
 
@@ -17,7 +17,8 @@
 
     <div class="col-4">
       <p class="p-3"><%= @experience.date %></p>
-      <button type="button" class="btn-red btn-lg active" role="button" aria-pressed="true"> Réserver </button>
+      <%= link_to 'Réserver', experience_bookings_path(@experience), class: 'btn-red btn-lg', method: :post %>
+       </button>
 
   </div>
 </div>
