@@ -4,6 +4,7 @@ class ExperiencesController < ApplicationController
   def index
     @experiences_last = Experience.all.last(6)
     @experiences_first = Experience.all.first(6)
+    @experiences_lastminute = Experience.where("date > ?", Date.today).order("date ASC").limit(6)
     @experiences = Experience.all
     @experiences_last = Experience.all.last(3)
     if params[:query].present?
