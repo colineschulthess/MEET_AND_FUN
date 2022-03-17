@@ -31,8 +31,8 @@ user9 = User.create!(email: 'usera@example.com', password: 'usera@example.com', 
 user10 = User.create!(email: 'userb@example.com', password: 'userb@example.com', sexe: 'femme', age: 37, name: 'amy')
   p "#{user10.name}"
 
-
   puts "Creating experiences..."
+
 
 experience1 = Experience.create!(name: "Sortie Catamaran Dauphins", description: "excursion en catamaran au Trois-Ilets", address: "Trois-Ilets", date: '12/06/2022', capacity: 10, price: 25, host: user1)
   photo1 = URI.open('https://images.unsplash.com/photo-1581272120682-97d9c87e7ccb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60')
@@ -74,4 +74,4 @@ experience10 = Experience.create!(name: "Fan de ciné", description: "On regarde
   photo10 = URI.open('https://images.unsplash.com/photo-1604975701397-6365ccbd028a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNpbmVtYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60')
   experience10.photo.attach(io: photo10, filename: 'cinema', content_type: 'image/jpg')
 
-p "#{experience10.name}"
+  p "#{experience10.name}"
