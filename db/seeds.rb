@@ -31,18 +31,17 @@ user9 = User.create!(email: 'usera@example.com', password: 'usera@example.com', 
 user10 = User.create!(email: 'userb@example.com', password: 'userb@example.com', sexe: 'femme', age: 37, name: 'amy')
   p "#{user10.name}"
 
-
   puts "Creating experiences..."
 
-experience1 = Experience.create!(name: "Sortie Catamaran Dauphins", description: "excursion en catamaran au Trois-Ilets", address: "Trois-Ilets", date: '12/06/2022', capacity: 10, price: 25, host: user1)
-experience2 = Experience.create!(name: "soirée carnaval", description: "soirée thème plume ", address: "Case Pilote", date: '12/03/2022', capacity: 100, price: 30, host: user2 )
-experience3 = Experience.create!(name: "Les ateliers de SISSY", description: "Vision Board ", address: "Ducos", date: '21/03/2022', capacity: 8, price: 25, host: user3 )
-experience4 = Experience.create!(name: "Chill out", description: "After beach", address: "Le Robert", date: '27/03/2022', capacity: 12, price: 10, host: user4 )
-experience5 = Experience.create!(name: "ESY KENNENGA B", description: "Concert muet ", address: "Fort-de-France", date: '22/03/2022', capacity: 2, price: 40, host: user5 )
-experience6 = Experience.create!(name: "Fly Board", description: "Volez sur l'eau", address: "Sainte-Luce", date: '19/03/2022', capacity: 4, price: 80, host: user6 )
-experience7 = Experience.create!(name: "Jet ski", description: "Excursion côte nord ", address: "Le Vauclin", date: '20/03/2022', capacity: 6, price: 270, host: user7 )
-experience8 = Experience.create!(name: "Buggy", description: "Randonnée d'1h20 ", address: "Le Diamant", date: '21/03/2022', capacity: 8, price: 100, host: user8 )
-experience9 = Experience.create!(name: "After Work", description: "On friday we all talk in english  ", address: "LAKOU Fort-de-France", date: '18/03/2022', capacity: 50, price: 5, host: user9 )
-experience10 = Experience.create!(name: "Fan de ciné", description: "On regarde et on en discute  ",address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 )
+experience1 = { name: "Sortie Catamaran Dauphins", description: "excursion en catamaran au Trois-Ilets", address: "Trois-Ilets", date: '12/06/2022', capacity: 10, price: 25, host: user1}
+experience2 = { name: "soirée carnaval", description: "soirée thème plume ", address: "Case Pilote", date: '12/03/2022', capacity: 100, price: 30, host: user2 }
+experience3 = { name: "Les ateliers de SISSY", description: "Vision Board ", address: "Ducos", date: '21/03/2022', capacity: 8, price: 25, host: user3 }
+experience4 = { name: "Chill out", description: "After beach", address: "Le Robert", date: '27/03/2022', capacity: 12, price: 10, host: user4 }
+experience5 = { name: "ESY KENNENGA B", description: "Concert muet ", address: "Fort-de-France", date: '22/03/2022', capacity: 2, price: 40, host: user5 }
+experience6 = { name: "Fly Board", description: "Volez sur l'eau", address: "Sainte-Luce", date: '19/03/2022', capacity: 4, price: 80, host: user6 }
+experience7 = { name: "Jet ski", description: "Excursion côte nord ", address: "Le Vauclin", date: '20/03/2022', capacity: 6, price: 270, host: user7 }
+experience8 = { name: "Buggy", description: "Randonnée d'1h20 ", address: "Le Diamant", date: '21/03/2022', capacity: 8, price: 100, host: user8 }
+experience9 = { name: "After Work", description: "On friday we all talk in english  ", address: "LAKOU Fort-de-France", date: '18/03/2022', capacity: 50, price: 5, host: user9 }
+experience = { name: "Fan de ciné", description: "On regarde et on en discute  ", address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 }
 
-p "#{experience10.name}"
+  p "#{experience10.name}"
