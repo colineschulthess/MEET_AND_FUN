@@ -9,6 +9,7 @@ puts "Cleaning database..."
 p "creating users"
 Experience.destroy_all
 User.destroy_all
+
 user1 = User.create!(email: 'user@example.com', password: 'user@example.com', sexe: 'homme', age: 20, name: 'dylan')
   p "#{user1.name}"
 user2 = User.create!(email: 'test@example.com', password: 'test@example.com', sexe: 'femme', age: 20, name: 'coline')
