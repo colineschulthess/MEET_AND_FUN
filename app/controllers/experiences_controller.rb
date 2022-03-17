@@ -1,11 +1,12 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[show edit update]
-
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @experiences_last = Experience.all.last(6)
     @experiences_first = Experience.all.first(6)
+    @experiences_lastminute = Experience.where("date > ?", Date.today).order("date ASC").limit(6)
     @experiences = Experience.all
-    @experiences_last = Experience.all.last(3)
+
     if params[:query].present?
       sql_query = "name ILIKE :query OR address ILIKE :query OR description ILIKE :query"
       @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
@@ -31,10 +32,11 @@ class ExperiencesController < ApplicationController
 
   def show
     @experiences = Experience.all
+    @capacity = @experience.capacity
+    #@actual_capacity = @capacity - @experience.booking.count
   end
 
   def edit
-
   end
 
   def update
