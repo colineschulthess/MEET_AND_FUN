@@ -2,9 +2,9 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[show edit update]
 
   def index
+    @experiences_last = Experience.all.last(6)
+    @experiences_first = Experience.all.first(6)
     @experiences = Experience.all
-    @experiences_last = Experience.all.last(3)
-    @experiences_
   end
 
   def new
