@@ -21,6 +21,7 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
+    @experience.host = current_user
     if @experience.save
       redirect_to experiences_path
     else

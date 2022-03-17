@@ -1,15 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('fete_à_la_plage.jpg') %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('boite-de-nuit.jpg') %>);">
   <div class= "container">
     <div class= "row">
       <div class= "col-12 col-md-8 col-lg-6">
         <h1> MEET AND FUN </h1>
         <p>Enjoy and split the bill ! </p>
-        <%= form_tag experiences_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find an experience" %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= form_tag experiences_path, method: :get, class: 'row' do %>
+          <div class="col-12 col-md-10">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Experience" %>
+          </div>
+          <div class="col-12 col-md-2">
+            <%= submit_tag "Search", class: "btn btn-red" %>
+          </div>
         <% end %>
       </div>
     </div>
