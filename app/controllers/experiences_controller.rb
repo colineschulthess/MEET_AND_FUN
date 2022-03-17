@@ -23,10 +23,11 @@ class ExperiencesController < ApplicationController
 
   def show
     @experiences = Experience.all
+    @capacity = @experience.capacity
+    # @actual_capacity = @capacity - @experience.bookings.count
   end
 
   def edit
-
   end
 
   def update
