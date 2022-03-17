@@ -14,6 +14,11 @@
 <div class="container mt-3 mb-3">
   <div class="title">
     <h3> Les dernières expériences publiées </h3>
+      <%= render "cards_last"%>
+      <br>
+      <button class="btn-red"> Voir plus
+      </button>
+    </div>
   </div>
 </div>
 
@@ -32,29 +37,29 @@
     <% end %>
   </div>
   <br>
-   <button class="btn-red"> Voir plus </button>
+  <button class="btn-red"> Voir plus </button>
 </div>
+
 <br>
+
 <div class="container mt-3 mb-3">
   <div class="title">
     <h3> Les plus populaires </h3>
+      <%= render "cards_first"%>
+      <br>
+      <button class="btn-red"> Voir plus
+      </button>
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="cards">
-    <% @experiences.each do |experience| %>
-      <div class="card-experience">
-        <img src="" alt="">
-        <div class="card-experience-infos">
-          <div>
-            <h2><%= experience.name %></h2>
-          </div>
-          <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
-        </div>
-      </div>
-    <% end %>
+<div class="container mt-3 mb-3">
+  <div class="title">
+    <h3> Last minute </h3>
+      <%= render "cards_last"%>
+      <br>
+      <button class="btn-red"> Voir plus
+      </button>
+    </div>
   </div>
-  <br>
-   <button class="btn-red"> Voir plus </button>
 </div>

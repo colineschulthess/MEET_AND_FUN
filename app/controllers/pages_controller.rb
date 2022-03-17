@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @experiences = Experience.last(3)
+    @experiences_last = Experience.all.last(6)
+    @experiences = Experience.all
   end
 end
