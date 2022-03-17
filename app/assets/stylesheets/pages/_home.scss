@@ -22,14 +22,29 @@
 }
 
 .btn-red {
-  color: #fff;
+  color: white;
   background-color: rgba(228, 23, 73, 1);
   border-color: rgba(228, 23, 73, 1);
   border-radius: 4px;
   text-decoration: none;
+  font-family: 'ubuntu',sans-serif;
 }
 
-.btn-red a {
+.btn-red {
+  a {
+    color: white !important
+  }
+}
+.btn-yellow {
+  color: #fff;
+  background-color: #F5587B;
+  border-color: #ff8A5C;;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'ubuntu',sans-serif;
+}
+
+.btn-yellow a {
   color: white
 }
 
@@ -41,6 +56,5 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
   font-weight: regular;
 }
