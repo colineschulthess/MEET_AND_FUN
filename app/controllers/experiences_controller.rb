@@ -1,6 +1,6 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[show edit update]
-
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @experiences_last = Experience.all.last(6)
     @experiences_first = Experience.all.first(6)
@@ -32,7 +32,7 @@ class ExperiencesController < ApplicationController
   def show
     @experiences = Experience.all
     @capacity = @experience.capacity
-    # @actual_capacity = @capacity - @experience.bookings.count
+    #@actual_capacity = @capacity - @experience.booking.count
   end
 
   def edit
