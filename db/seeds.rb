@@ -33,6 +33,7 @@ user10 = User.create!(email: 'userb@example.com', password: 'userb@example.com',
 
   puts "Creating experiences..."
 experience1 = { name: "Sortie Catamaran Dauphins", description: "excursion en catamaran au Trois-Ilets", address: "Trois-Ilets", date: '12/06/2022', capacity: 10, price: 25, host: user1}
+experience1.photo.attach(io: photo1)
 experience2 = { name: "soirée carnaval", description: "soirée thème plume ", address: "Case Pilote", date: '12/03/2022', capacity: 100, price: 30, host: user2 }
 experience3 = { name: "Les ateliers de SISSY", description: "Vision Board ", address: "Ducos", date: '21/03/2022', capacity: 8, price: 25, host: user3 }
 experience4 = { name: "Chill out", description: "After beach", address: "Le Robert", date: '27/03/2022', capacity: 12, price: 10, host: user4 }
@@ -43,12 +44,4 @@ experience8 = { name: "Buggy", description: "Randonnée d'1h20 ", address: "Le D
 experience9 = { name: "After Work", description: "On friday we all talk in english  ", address: "LAKOU Fort-de-France", date: '18/03/2022', capacity: 50, price: 5, host: user9 }
 experience = { name: "Fan de ciné", description: "On regarde et on en discute  ", address: "Palais des congrès MADIANA", date: '20/03/2022', capacity: 6, price: 30, host: user10 }
 
-
-
-
-
-[experience1, experience2].each do |attributes|
-  experience = Experience.create!(attributes)
-  puts "Created #{experience.name}"
-  end
 puts "Finished!"
