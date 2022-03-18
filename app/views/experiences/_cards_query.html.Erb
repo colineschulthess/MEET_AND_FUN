@@ -1,0 +1,16 @@
+<div class="cards">
+    <% @experiences_query.each do |experience| %>
+      <%= link_to experience_path(experience) do %>
+        <div class="card-experience">
+          <%= cl_image_tag experience.photo.key, alt: '' %>
+            <div class="card-experience-infos">
+              <div>
+                <h2><%= experience.name %></h2>
+              </div>
+              <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+</div>
