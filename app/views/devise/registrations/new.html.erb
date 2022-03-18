@@ -1,13 +1,13 @@
 <div class="container">
     <div class="col-6 mx-auto mb-4 mt-4 ">
-      <h2>Sign up</h2>
+      <h2> Créez votre compte </h2>
     </div>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs col-6 mx-auto mb-4">
-      <%= f.input :name , placeholder: "entrer votre nom" %>
-      <%= f.input :age , placeholder: "selectionner votre age" %>
+      <%= f.input :name , placeholder: "Entrez votre nom" %>
+      <%= f.input :age , placeholder: "Sélectionnez votre âge" %>
       <%= f.input :sexe, collection: User::GENRES %>
       <%= f.input :email,
                   required: true,

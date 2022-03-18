@@ -1,32 +1,39 @@
 
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
 
-    <h1 class="display-3 text-center"><%= @experience.name %></h1>
+  <h1 class="display-3 text-center"><%= @experience.name %></h1>
 </div>
 
 <div class="container md-1 mb-4">
   <div class="row mt-4">
 
     <div class="col-8">
-      <h2>Au Programme</h2>
-      <p class="p-3"><%= @experience.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam suscipit rerum deleniti explicabo ad incidunt iste nobis. Dolor sapiente, vel cumque quisquam reprehenderit totam? Exercitationem sequi delectus eius assumenda.</p>
-      <p class="p-3">Nombres de Participants possible - <%= @capacity %>  <br> Places disponibles : <%#= @actual_capacity %> </p>
+      <h3>Au programme</h3>
+      <p class="p-2"><%= @experience.description %></p>
+      <p class="p-2">Nombres de participants autorisé : <%= @capacity %>  <br> Nombre de places disponibles : <%#= @actual_capacity %> </p>
     </div>
 
     <div class="col-4">
-      <p class="p-3"><%= @experience.date %></p>
+      <h3>Plus d'infos </h3>
+      <br>
+      <p>  Lieu : <%= @experience.address %></p>
+       <p>  Date : <%= @experience.date %></p>
+       <p>  Horaire : 10h </p>
       <%= link_to 'Réserver', experience_bookings_path(@experience), class: 'btn-red btn-lg', method: :post %>
        </button>
 
   </div>
-</div>
+
 
 <div class="container">
+  <div class="title">
+    <h3> Expériences disponibles cette semaine </h3>
   <div class="cards">
-    <% @experiences.each do |experience| %>
+    <% @experiences_lastminute.each do |experience| %>
       <%= link_to experience_path(experience) do %>
         <div class="card-experience">
-          <img src="" alt="">
+         <%= cl_image_tag experience.photo.key, alt: '' %>
           <div class="card-experience-infos">
             <div>
               <h2><%= experience.name %></h2>
@@ -37,4 +44,5 @@
       <% end %>
     <% end %>
   </div>
+</div>
 </div>

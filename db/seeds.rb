@@ -62,7 +62,7 @@ experience7 = Experience.create!(name: "Jet ski", description: "Excursion côte 
   photo7 = URI.open('https://images.unsplash.com/photo-1583008585590-c4ed0010bed6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8amV0c2tpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60')
   experience7.photo.attach(io: photo7, filename: 'jetski', content_type: 'image/jpg')
 
-experience8 = Experience.create!(name: "Buggy", description: "Randonnée d'1h20 ", address: "Le Diamant", date: '21/03/2022', capacity: 8, price: 100, host: user8 )
+experience8 = Experience.create!(name: "Buggy", description: "Enfourchez votre buggy pour une randonnée d'1h20 pour découvrir les forêts et les champs de canne autour de la ville du Diamant. Pause gourmande avec vue sur le rocher et la mer des Caraïbes, dégustation de rhum et de mets locaux.", address: "Le Diamant", date: '21/03/2022', capacity: 8, price: 100, host: user8 )
   photo8 = URI.open('https://images.unsplash.com/photo-1527929544571-45abc358cd7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVnZ3klMjBqdW5nbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60')
   experience8.photo.attach(io: photo8, filename: 'jetski', content_type: 'image/jpg')
 
