@@ -35,6 +35,13 @@
     color: white !important
   }
 }
+
+.btn-red:hover {
+    color: white;
+    background-color: rgb(247, 166, 186);
+    border-color: rgb(247, 166, 186);
+}
+
 .btn-yellow {
   color: #fff;
   background-color: #F5587B;
@@ -51,7 +58,8 @@
 }
 
 h3 {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   color: rgba(228, 23, 73, 1);
   font-size: 20px;
 }
