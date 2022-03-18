@@ -4,17 +4,7 @@
       <div class= "col-12 col-md-8 col-lg-6">
         <h1> MEET AND FUN </h1>
         <p>Enjoy and split the bill ! </p>
-        <%= form_tag experiences_path, method: :get, class: 'row' do %>
-          <div class="col-12 col-md-10">
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Tapez un lieu" %>
-          </div>
-          <div class="col-12 col-md-2">
-              <%= submit_tag "Search", class: "btn btn-red" %>
-          </div>
-        <% end %>
+        <%= render "shared/searchbar" %>
       </div>
     </div>
   </div>
