@@ -11,17 +11,23 @@
     <div class="col-8">
       <h3>Au programme</h3>
       <p class="p-2"><%= @experience.description %></p>
-      <p class="p-2">Nombres de participants autorisé : <%= @capacity %>  <br> Nombre de places disponibles : <%#= @actual_capacity %> </p>
+      <% if @actual_capacity >= 0 %>
+      <p class="p-2">Nombres de participants autorisé : <%= @capacity %>  <br> Nombre de places disponibles : <%= @actual_capacity %> </p>
+      <% else %>
+        <p>Il n'y a plus de place pour cette experience</p>
+      <% end %>
     </div>
 
     <div class="col-4">
-      <h3>Plus d'infos </h3>
-      <br>
-      <p>  Lieu : <%= @experience.address %></p>
-       <p>  Date : <%= @experience.date %></p>
-       <p>  Horaire : 10h </p>
-      <%= link_to 'Réserver', experience_bookings_path(@experience), class: 'btn-red btn-lg', method: :post %>
-       </button>
+        <h3>Plus d'infos </h3>
+        <br>
+        <p>  Lieu : <%= @experience.address %></p>
+        <p>  Date : <%= @experience.date %></p>
+        <p>  Horaire : 10h </p>
+        <p> Prix : <%= @experience.price %> </p>
+      <% if @actual_capacity >= 0 %>
+        <%= link_to 'Réserver', experience_bookings_path(@experience), class: 'btn-red btn-lg', method: :post %>
+      <% end %>
 
   </div>
 
