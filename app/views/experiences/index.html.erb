@@ -2,13 +2,25 @@
  <div class= "container">
     <div class= "row">
       <div class= "text-center" >
-        <h1>
-        <br>
-        <%= @experiences.count %> expériences en Martinique </h1>
+        <h1> <%= @experiences.count %> expériences en Martinique </h1>
       </div>
    </div>
   </div>
 </div>
+
+<%= if params[:query].present? %>
+<div class="container mt-3 mb-3">
+  <div class="title">
+    <h3> Les expériences query</h3>
+      <%= render "cards_query"%>
+      <br>
+      <button class="btn-red"> Voir plus
+      </button>
+    </div>
+  </div>
+</div>
+
+<%= else %>
 
 <div class="container mt-3 mb-3">
   <div class="title">
@@ -21,16 +33,7 @@
   </div>
 </div>
 
-<div class="container mt-3 mb-3">
-  <div class="title">
-    <h3> Les plus populaires </h3>
-      <%= render "cards_first"%>
-      <br>
-      <button class="btn-red"> Voir plus
-      </button>
-    </div>
-  </div>
-</div>
+<%= end %>
 
 <div class="container mt-3 mb-3">
   <div class="title">

@@ -1,15 +1,18 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[show edit update]
   skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
     @experiences_last = Experience.all.last(6)
     @experiences_first = Experience.all.first(6)
     @experiences_lastminute = Experience.where("date > ?", Date.today).order("date ASC").limit(6)
     @experiences = Experience.all
 
+    #@experiences_query = Experience.find(params[:query])
+
     if params[:query].present?
       sql_query = "name ILIKE :query OR address ILIKE :query OR description ILIKE :query"
-      @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
+      @experiences_query = Experience.where(sql_query, query: "%#{params[:query]}%")
     else
       @experiences = Experience.all
     end
@@ -23,7 +26,7 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new(experience_params)
     @experience.host = current_user
     if @experience.save
-      redirect_to experiences_path, notice: 'New experience create'
+      redirect_to experiences_path, notice: 'Nouvelle expérience créée'
     else
       render :new
     end
