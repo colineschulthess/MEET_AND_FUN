@@ -1,5 +1,6 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('https://res.cloudinary.com/dd2bddi5t/image/upload/c_fill/v1/development/b0wcpecv29c92txu099xbp4eyu9q') %>);">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @experience.photo.key, height: 300, width: 400, crop: :fill %>);">
 
   <h1 class="display-3 text-center"><%= @experience.name %></h1>
 </div>
