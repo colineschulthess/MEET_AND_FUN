@@ -8,7 +8,7 @@ class ExperiencesController < ApplicationController
     @experiences_lastminute = Experience.where("date > ?", Date.today).order("date ASC").limit(6)
     @experiences = Experience.all
 
-    #@experiences_query = Experience.find(params[:query])
+    @experiences_query = Experience.where(params[:query])
 
     if params[:query].present?
       sql_query = "name ILIKE :query OR address ILIKE :query OR description ILIKE :query"
