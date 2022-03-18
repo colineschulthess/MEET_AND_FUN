@@ -18,7 +18,7 @@
       <h3>Plus d'infos </h3>
       <br>
       <p>  Lieu : <%= @experience.address %></p>
-       <p>  Date : <%= @experience.date %></p>
+       <p>  Date : <%= @experience.date.to_time.strftime('%e %B %Y')%></p>
        <p>  Horaire : 10h </p>
       <%= link_to 'Réserver', experience_bookings_path(@experience), class: 'btn-red btn-lg', method: :post %>
        </button>
