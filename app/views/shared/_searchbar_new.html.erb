@@ -1,0 +1,11 @@
+<%= form_tag experiences_path, method: :get, class: 'row mt-4' do %>
+  <div class="col-12 col-md-6 offset-md-2" >
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Tapez un lieu" %>
+  </div>
+  <div class="col-12 col-md-auto">
+      <%= submit_tag "Search", class: "btn btn-red" %>
+  </div>
+<% end %>

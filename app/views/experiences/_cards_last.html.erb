@@ -1,15 +1,15 @@
 <div class="cards">
-    <% @experiences_last.each do |experience| %>
-      <%= link_to experience_path(experience) do %>
-        <div class="card-experience">
-          <%= cl_image_tag experience.photo.key %>
-            <div class="card-experience-infos">
-              <div>
-                <h2><%= experience.name %></h2>
-              </div>
-                <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
+  <% @experiences_last.each do |experience| %>
+    <%= link_to experience_path(experience) do %>
+      <div class="card-experience">
+        <%= cl_image_tag experience.photo.key %>
+        <div class="card-experience-infos">
+          <div>
+            <h2><%= experience.name %></h2>
           </div>
+          <h2 class="card-experience-pricing"><%= experience.price %> €</h2>
         </div>
-      <% end %>
+      </div>
     <% end %>
+  <% end %>
 </div>

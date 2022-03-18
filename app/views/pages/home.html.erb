@@ -4,6 +4,9 @@
       <div class= "col-12">
         <h1> MEET AND FUN </h1>
         <p>Enjoy and split the bill ! </p>
+
+        <%= render "shared/searchbar" %>
+
         <%= form_tag experiences_path, method: :get, class: 'row' do %>
           <div class="col-12 col-md-10">
             <%= text_field_tag :query,
@@ -17,6 +20,7 @@
             <% end %>
           </div>
         <% end %>
+
       </div>
     </div>
   </div>

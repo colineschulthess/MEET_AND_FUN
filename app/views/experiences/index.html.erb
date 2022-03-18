@@ -1,10 +1,9 @@
 <div class="header-banner"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('martinique.jpg') %>);">
- <div class= "container">
-    <div class= "row">
-      <div class= "text-center" >
-        <h1> <%= @experiences.count %> expériences en Martinique </h1>
-      </div>
-   </div>
+  <div class= "container">
+    <div class= "text-center" >
+      <h1> <%= @experiences.count %> expériences en Martinique </h1>
+      <%= render "shared/searchbar_new" %>
+    </div>
   </div>
 </div>
 
@@ -12,24 +11,18 @@
   <div class="container mt-3">
     <div class="title">
       <h3> Les expériences correspondant à votre recherche "<%=params[:query]%>"</h3>
-        <%= render "cards_query"%>
-        <br>
-        <button class="btn-red"> Voir plus
-        </button>
-      </div>
+      <%= render "cards_query"%>
+      <br>
+      <button class="btn-red"> Voir plus</button>
     </div>
   </div>
 <% else %>
-
-
   <div class="container mt-3">
     <div class="title">
       <h3> Les dernières expériences publiées </h3>
-        <%= render "cards_last"%>
-        <br>
-        <button class="btn-red"> Voir plus
-        </button>
-      </div>
+      <%= render "cards_last"%>
+      <br>
+      <button class="btn-red"> Voir plus</button>
     </div>
   </div>
 <% end %>
@@ -38,10 +31,9 @@
   <div class= "row mt-3">
     <div class="title">
       <h3> Last minute </h3>
-        <%= render "cards_lastminute"%>
-        <br>
-          <button class="btn-red"> Voir plus </button>
-      </div>
+      <%= render "cards_lastminute"%>
+      <br>
+      <button class="btn-red"> Voir plus </button>
     </div>
   </div>
 </div>
