@@ -5,6 +5,7 @@
         <%= simple_form_for(@experience) do |f| %>
           <%= f.input :name, label: false, placeholder: 'Enter the new event' %>
           <%= f.input :address, label: false, placeholder: 'Enter the address' %>
+           <%= f.input :photo, as: :file, placeholder: 'Enter your picture'%>
           <%= f.input :date, html5: true, label: false %>
           <%= f.input :description, label: false, placeholder: 'Enter the description'%>
           <%= f.input :capacity, label: false, placeholder: 'Enter the capacity' %>

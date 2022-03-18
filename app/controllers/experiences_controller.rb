@@ -23,7 +23,7 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new(experience_params)
     @experience.host = current_user
     if @experience.save
-      redirect_to experiences_path
+      redirect_to experiences_path, notice: 'New experience create'
     else
       render :new
     end
