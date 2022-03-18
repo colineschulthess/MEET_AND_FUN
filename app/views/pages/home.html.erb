@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('party_sunset.jpg') %>);">
   <div class= "container">
     <div class= "row">
-      <div class= "col-12 col-md-8 col-lg-6">
+      <div class= "col-12">
         <h1> MEET AND FUN </h1>
         <p>Enjoy and split the bill ! </p>
         <%= form_tag experiences_path, method: :get, class: 'row' do %>
@@ -9,10 +9,12 @@
             <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "Experience" %>
+              placeholder: "Entre ton choix" %>
           </div>
-          <div class="col-12 col-md-2">
-              <%= submit_tag "Search", class: "btn btn-red" %>
+          <div class="col-12 col-md-2 btn btn-red d-flex align-items-center justify-content-center p-0">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <%= submit_tag "Search", class: "btn text-white" do %>
+            <% end %>
           </div>
         <% end %>
       </div>
